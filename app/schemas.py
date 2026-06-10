@@ -10,6 +10,7 @@ class UserCreate(UserBase):
    
 class UserResponse(UserBase):
     id: int
+    is_admin: bool 
    
 
     model_config = {
