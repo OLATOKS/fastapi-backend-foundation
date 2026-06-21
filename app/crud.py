@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
-import models, schemas
+from app import models, schemas
 
 # This handles password hashing - bcrypt is the industry standard
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

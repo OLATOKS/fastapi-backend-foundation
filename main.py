@@ -1,14 +1,14 @@
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
-from database import SessionLocal, engine 
-from schemas import UserCreate, UserResponse 
-from crud import create_user, get_user_by_email 
-import models
+from app.database import SessionLocal, engine 
+from app.schemas import UserCreate, UserResponse 
+from app.crud import create_user, get_user_by_email 
+import app.models as models
 
 app = FastAPI()
 
 
-models.Base.metadata.create_all(bind=engine)
+
 
 def get_db():
     db = SessionLocal()
